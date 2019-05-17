@@ -1,0 +1,30 @@
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 64px);
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.example-card {
+  max-width: 400px;
+}

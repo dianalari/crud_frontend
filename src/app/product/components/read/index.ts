@@ -1,0 +1,1 @@
+export { ReadComponent } from './read.component'

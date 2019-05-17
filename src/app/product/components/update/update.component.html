@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button routerLink="/dashboard">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <span>Product Module</span>
+</mat-toolbar>
+
+<div class="content-wrapper">
+  <form class="example-container" [formGroup]="productForm" (ngSubmit)="save()">
+
+    <h2 class="mat-title" [innerText]="title"></h2>
+
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+      <mat-error *ngIf="productForm.get('name').hasError('required')">Product name is required.</mat-error>
+      <mat-error *ngIf="productForm.get('name').hasError('minlength')">Product name must be at least 2 characters.</mat-error>
+      <mat-error *ngIf="productForm.get('name').hasError('maxlength')">Product name can not be longer than 45
+        characters.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea rows="4" maxlength="200" matInput placeholder="Description" formControlName="description"></textarea>
+      <mat-error *ngIf="productForm.get('description').hasError('required')">Product description is required.</mat-error>
+      <mat-error *ngIf="productForm.get('description').hasError('minlength')">Product description must be at least 10
+        characters.</mat-error>
+      <mat-error *ngIf="productForm.get('description').hasError('maxlength')">Product description can not be longer
+        than 200 characters.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Price" type="number" formControlName="price">
+      <mat-error *ngIf="productForm.get('price').hasError('required')">Product price is required.</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" type="submit" [disabled]="productForm.invalid">Save</button>
+
+  </form>
+</div>

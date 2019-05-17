@@ -1,0 +1,45 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 64px);
+}
+
+.create-button{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
+
+table {
+  width: 100%;
+}
+
+.cdk-column-name {
+  white-space: nowrap;
+}
+
+.cdk-column-id,
+.cdk-column-name,
+.cdk-column-description,
+.cdk-column-price {
+  padding-right: 0.75rem;
+}
+
+/* .mat-column-actions {
+  flex: 0 0 300px;
+} */
+
+.example-container > * {
+  width: 100%;
+}
